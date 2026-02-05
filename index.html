@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAN Industrial CR | Ingeniería en Ventilación de Alto Nivel</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;600;700;900&family=Plus+Jakarta+Sans:wght@200;400;500;700&display=swap');
+        
+        html {
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        /* Technical Instruction Styles */
+        a.button, .btn, button {
+            all: unset;
+            cursor: pointer;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #ffffff;
+            color: #051130;
+            margin: 0;
+            padding: 0;
+            -webkit-overflow-scrolling: touch;
+            overflow-x: hidden;
+            width: 100%;
+            position: relative;
+        }
+
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Outfit', sans-serif;
+        }
+
+        @keyframes spin-slow {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+        .animate-spin-slow {
+            animation: spin-slow 12s linear infinite;
+        }
+
+        @keyframes slide-infinite {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(100%); }
+        }
+        .animate-slide-infinite {
+            animation: slide-infinite 3s linear infinite;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/"
+  }
+}
+</script>
+<script>
+document.addEventListener("click", function (e) {
+  const el = e.target.closest("a[href^='#']");
+  if (!el) return;
+
+  e.preventDefault();
+  const target = document.querySelector(el.getAttribute("href"));
+  if (target) {
+    target.scrollIntoView({ behavior: "smooth" });
+  }
+});
+</script>
+</head>
+<body class="antialiased selection:bg-[#E62E2E] selection:text-white">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+</body>
+</html>
