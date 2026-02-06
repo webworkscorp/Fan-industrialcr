@@ -128,7 +128,7 @@ const Services: React.FC = () => {
             <ProductBox title="Axial Importado" subtitle="Voltaje 110V" image={["https://i.imgur.com/T5cQi0f.png", "https://i.imgur.com/PNBhC4r.png"]}>
               <TechnicalTable headers={['Medida', 'Pot.', 'Caudal', 'RPM']} data={[{ m: '12"', p: '130W', c: '1130 CFM', r: '1400' }, { m: '16"', p: '200W', c: '2400 CFM', r: '1400' }, { m: '18"', p: '380W', c: '3530 CFM', r: '1400' }, { m: '24"', p: '380W', c: '3530 CFM', r: '1400' }]} />
             </ProductBox>
-            <ProductBox title="Abanicos Industriales de Pared y Piso" subtitle="Alto Desempeño" image={["https://i.imgur.com/CjHYYPm.png", "https://i.imgur.com/vtAhpwH.png"]} className="lg:col-span-2" aspect="aspect-[21/9] md:aspect-[16/7]" imagePadding="p-0" />
+            <ProductBox title="Ventiladores Industriales de Pared y Piso" subtitle="Alto Desempeño" image={["https://i.imgur.com/CjHYYPm.png", "https://i.imgur.com/vtAhpwH.png"]} className="lg:col-span-2" aspect="aspect-[21/9] md:aspect-[16/7]" imagePadding="p-0" />
           </div>
         </div>
 
