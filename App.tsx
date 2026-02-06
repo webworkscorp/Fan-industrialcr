@@ -5,6 +5,7 @@ import WorkProcess from './components/WorkProcess';
 import AboutUs from './components/AboutUs';
 import VisualGallery from './components/VisualGallery';
 import Services from './components/Services';
+import GreaseExtractionSection from './components/GreaseExtractionSection';
 import WhyChooseUs from './components/WhyChooseUs';
 import ConsultationForm from './components/ConsultationForm';
 import Footer from './components/Footer';
@@ -20,6 +21,7 @@ const App: React.FC = () => {
         <AboutUs />
         <VisualGallery />
         <Services />
+        <GreaseExtractionSection />
         <WhyChooseUs />
         <ConsultationForm />
       </main>

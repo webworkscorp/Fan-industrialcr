@@ -32,7 +32,7 @@ const ConsultationForm: React.FC = () => {
   };
 
   return (
-    <section className="py-24 bg-white border-t border-gray-100" id="consultation">
+    <section className="py-24 bg-white border-t border-gray-200" id="consultation">
       <div className="max-w-5xl mx-auto px-6 lg:px-8">
         
         {/* Encabezado Directo y Persuasivo */}
@@ -47,7 +47,7 @@ const ConsultationForm: React.FC = () => {
           </div>
           <div className="md:text-right">
             <Reveal width="100%" delay={200}>
-              <p className="text-[#051130] text-sm font-black uppercase tracking-widest">
+              <p className="text-[#051130] text-[13px] font-black uppercase tracking-widest">
                 Reciba su propuesta personalizada hoy mismo.
               </p>
             </Reveal>
@@ -56,13 +56,13 @@ const ConsultationForm: React.FC = () => {
 
         {/* Estructura de Formulario Profesional */}
         <Reveal width="100%" delay={300} duration={1000} direction="up">
-          <div className="bg-gray-50 border border-gray-200 p-8 md:p-12 rounded-lg">
+          <div className="bg-gray-50 border border-gray-200 p-8 md:p-12 rounded-lg shadow-sm">
             <form className="space-y-8" onSubmit={handleSubmit}>
               
               {/* Fila 1: Datos Personales */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
                 <div className="space-y-2">
-                  <label htmlFor="name" className="block text-[11px] font-black uppercase tracking-widest text-[#051130]">
+                  <label htmlFor="name" className="block text-[13px] font-black uppercase tracking-widest text-[#051130]">
                     Nombre del Contacto / Empresa
                   </label>
                   <input 
@@ -71,12 +71,12 @@ const ConsultationForm: React.FC = () => {
                     value={formData.name}
                     onChange={handleChange}
                     placeholder="Ej: Constructora ABC / Juan Pérez"
-                    className="w-full bg-white border border-gray-200 rounded-md px-5 py-4 text-[#051130] text-sm font-bold focus:outline-none focus:border-[#E62E2E] focus:ring-1 focus:ring-[#E62E2E] transition-all placeholder:text-gray-300"
+                    className="w-full bg-white border border-gray-300 rounded-md px-5 py-4 text-[#051130] text-sm font-bold focus:outline-none focus:border-[#E62E2E] focus:ring-1 focus:ring-[#E62E2E] transition-all placeholder:text-gray-400"
                     required
                   />
                 </div>
                 <div className="space-y-2">
-                  <label htmlFor="phone" className="block text-[11px] font-black uppercase tracking-widest text-[#051130]">
+                  <label htmlFor="phone" className="block text-[13px] font-black uppercase tracking-widest text-[#051130]">
                     Número de Teléfono
                   </label>
                   <input 
@@ -85,7 +85,7 @@ const ConsultationForm: React.FC = () => {
                     value={formData.phone}
                     onChange={handleChange}
                     placeholder="+506 0000-0000"
-                    className="w-full bg-white border border-gray-200 rounded-md px-5 py-4 text-[#051130] text-sm font-bold focus:outline-none focus:border-[#E62E2E] focus:ring-1 focus:ring-[#E62E2E] transition-all placeholder:text-gray-300"
+                    className="w-full bg-white border border-gray-300 rounded-md px-5 py-4 text-[#051130] text-sm font-bold focus:outline-none focus:border-[#E62E2E] focus:ring-1 focus:ring-[#E62E2E] transition-all placeholder:text-gray-400"
                     required
                   />
                 </div>
@@ -94,7 +94,7 @@ const ConsultationForm: React.FC = () => {
               {/* Fila 2: Correo */}
               <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
                 <div className="space-y-2">
-                  <label htmlFor="email" className="block text-[11px] font-black uppercase tracking-widest text-[#051130]">
+                  <label htmlFor="email" className="block text-[13px] font-black uppercase tracking-widest text-[#051130]">
                     Correo Electrónico
                   </label>
                   <input 
@@ -102,8 +102,8 @@ const ConsultationForm: React.FC = () => {
                     id="email"
                     value={formData.email}
                     onChange={handleChange}
-                    placeholder="ejemplo@correo.com"
-                    className="w-full bg-white border border-gray-200 rounded-md px-5 py-4 text-[#051130] text-sm font-bold focus:outline-none focus:border-[#E62E2E] focus:ring-1 focus:ring-[#E62E2E] transition-all placeholder:text-gray-300"
+                    placeholder="extractoresindustrialesfanca@gmail.com"
+                    className="w-full bg-white border border-gray-300 rounded-md px-5 py-4 text-[#051130] text-sm font-bold focus:outline-none focus:border-[#E62E2E] focus:ring-1 focus:ring-[#E62E2E] transition-all placeholder:text-gray-400"
                     required
                   />
                 </div>
@@ -111,7 +111,7 @@ const ConsultationForm: React.FC = () => {
 
               {/* Fila 3: Mensaje Detallado */}
               <div className="space-y-2">
-                <label htmlFor="details" className="block text-[11px] font-black uppercase tracking-widest text-[#051130]">
+                <label htmlFor="details" className="block text-[13px] font-black uppercase tracking-widest text-[#051130]">
                   Especificaciones del Proyecto / Requerimiento
                 </label>
                 <textarea 
@@ -120,7 +120,7 @@ const ConsultationForm: React.FC = () => {
                   onChange={handleChange}
                   rows={5}
                   placeholder="Por favor, detalle las dimensiones de su bodega o el producto de su interés..."
-                  className="w-full bg-white border border-gray-200 rounded-md px-5 py-4 text-[#051130] text-sm font-bold focus:outline-none focus:border-[#E62E2E] focus:ring-1 focus:ring-[#E62E2E] transition-all resize-none placeholder:text-gray-300"
+                  className="w-full bg-white border border-gray-300 rounded-md px-5 py-4 text-[#051130] text-sm font-bold focus:outline-none focus:border-[#E62E2E] focus:ring-1 focus:ring-[#E62E2E] transition-all resize-none placeholder:text-gray-400"
                   required
                 ></textarea>
               </div>
@@ -129,7 +129,7 @@ const ConsultationForm: React.FC = () => {
               <div className="pt-4 flex justify-center w-full">
                 <button 
                   type="submit" 
-                  className="w-full md:w-auto bg-[#051130] text-white px-8 md:px-12 py-5 rounded-md font-black uppercase text-xs tracking-[0.3em] hover:bg-[#E62E2E] transition-all flex items-center justify-center gap-4 group shadow-lg"
+                  className="w-full md:w-auto bg-[#051130] text-white px-8 md:px-12 py-5 rounded-md font-black uppercase text-sm tracking-[0.3em] hover:bg-[#E62E2E] transition-all flex items-center justify-center gap-4 group shadow-lg"
                 >
                   Enviar consulta
                   <i className="fa-solid fa-arrow-right text-lg group-hover:translate-x-1 transition-transform"></i>

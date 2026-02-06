@@ -21,7 +21,7 @@ const Navbar: React.FC = () => {
             </div>
             <div>
               <span className="text-2xl font-black text-[#051130] block leading-none uppercase tracking-tighter">FAN INDUSTRIAL</span>
-              <span className="text-[10px] tracking-[0.4em] text-[#E62E2E] font-black uppercase">Costa Rica</span>
+              <span className="text-[12px] tracking-[0.4em] text-[#E62E2E] font-black uppercase">Costa Rica</span>
             </div>
           </a>
 
@@ -31,17 +31,17 @@ const Navbar: React.FC = () => {
               <a
                 key={link.name}
                 href={link.href}
-                className="text-[11px] font-black uppercase tracking-[0.2em] text-[#051130] hover:text-[#E62E2E] transition-all relative group"
+                className="text-[13px] font-black uppercase tracking-[0.2em] text-[#051130] hover:text-[#E62E2E] transition-all relative group"
               >
                 {link.name}
                 <span className="absolute -bottom-2 left-0 w-0 h-[2px] bg-[#E62E2E] transition-all group-hover:w-full"></span>
               </a>
             ))}
             <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=industriasjairo1581@hotmail.com"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=extractoresindustrialesfanca@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#051130] text-white px-8 py-4 rounded-2xl text-[10px] font-black uppercase tracking-widest transition-all hover:bg-[#E62E2E] hover:shadow-xl hover:shadow-[#E62E2E]/20"
+              className="bg-[#051130] text-white px-8 py-4 rounded-2xl text-[12px] font-black uppercase tracking-widest transition-all hover:bg-[#E62E2E] hover:shadow-xl hover:shadow-[#E62E2E]/20"
             >
               Pedir información
             </a>
@@ -50,10 +50,10 @@ const Navbar: React.FC = () => {
           {/* Contacto Directo en Mobile */}
           <div className="lg:hidden">
             <a
-              href="https://mail.google.com/mail/?view=cm&fs=1&to=industriasjairo1581@hotmail.com"
+              href="https://mail.google.com/mail/?view=cm&fs=1&to=extractoresindustrialesfanca@gmail.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-[#051130] text-white p-3 rounded-xl text-[10px] font-black uppercase tracking-widest transition-all"
+              className="bg-[#051130] text-white p-3 rounded-xl text-sm font-black uppercase tracking-widest transition-all"
             >
               <i className="fa-solid fa-envelope"></i>
             </a>

@@ -4,17 +4,12 @@ import { Reveal } from './Reveal';
 const Hero: React.FC = () => {
   const [text, setText] = useState('');
   const [isDeleting, setIsDeleting] = useState(false);
-  const [loaded, setLoaded] = useState(false);
   
   const phrase = "FAN INDUSTRIAL CR";
   const typingSpeed = 100;
   const deletingSpeed = 40;
   const pauseTime = 3000;
   const startDelay = 800;
-
-  useEffect(() => {
-    setLoaded(true);
-  }, []);
 
   const handleType = useCallback(() => {
     const fullText = phrase;
@@ -45,12 +40,12 @@ const Hero: React.FC = () => {
 
   return (
     <section className="relative min-h-[90vh] flex items-center bg-[#051130] overflow-hidden">
-      {/* Fondo optimizado con efecto de zoom suave al cargar */}
-      <div className={`absolute inset-0 z-0 pointer-events-none overflow-hidden transition-transform duration-[2000ms] ease-out ${loaded ? 'scale-100' : 'scale-110'}`}>
+      {/* Fondo estático */}
+      <div className="absolute inset-0 z-0 pointer-events-none overflow-hidden">
         <img 
           src="https://i.imgur.com/ZFEvi3n.jpeg" 
           alt="Ingeniería Industrial" 
-          className="w-full h-full object-cover opacity-25 hero-image"
+          className="w-full h-full object-cover opacity-25"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-[#051130] via-[#051130]/95 to-[#051130]/30"></div>
       </div>

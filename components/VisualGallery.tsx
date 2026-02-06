@@ -17,33 +17,29 @@ const VisualGallery: React.FC = () => {
       <div className="grid grid-cols-1 md:grid-cols-2">
         
         {/* Columna 1: Video (Vertical en PC, Top en Móvil) */}
-        <Reveal width="100%" className="md:h-full relative">
-          {/* En móvil mantenemos la altura fija 60vh. En PC usamos h-full para llenar la columna verticalmente */}
-          <div className="w-full h-[60vh] md:h-full relative bg-[#051130]">
-             {/* Overlay sutil */}
-            <div className="absolute inset-0 bg-black/10 z-10 pointer-events-none"></div>
-            <video 
-              src={videoUrl} 
-              className="w-full h-full object-cover"
-              autoPlay 
-              loop 
-              muted 
-              playsInline
-            />
-          </div>
-        </Reveal>
+        <div className="md:h-full relative w-full h-[60vh] bg-[#051130]">
+          <div className="absolute inset-0 bg-black/10 z-10 pointer-events-none"></div>
+          <video 
+            src={videoUrl} 
+            className="w-full h-full object-cover"
+            autoPlay 
+            loop 
+            muted 
+            playsInline
+          />
+        </div>
 
-        {/* Columna 2: Grid de Imágenes 2x2 */}
+        {/* Columna 2: Grid de Imágenes 2x2 - Con Reveal de entrada */}
         <div className="grid grid-cols-2">
           {images.map((img, index) => (
-            <Reveal key={index} delay={index * 150} width="100%" duration={1200} className="h-full">
-              <div className="aspect-square relative overflow-hidden group w-full h-full">
+            <Reveal key={index} width="100%" delay={index * 100} direction="none">
+              <div className="aspect-square relative overflow-hidden w-full h-full">
                 <img 
                   src={img} 
                   alt={`Galería Visual ${index + 1}`} 
-                  className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="w-full h-full object-cover"
                 />
-                <div className="absolute inset-0 bg-[#051130]/30 group-hover:bg-transparent transition-colors duration-500"></div>
+                <div className="absolute inset-0 bg-[#051130]/30"></div>
               </div>
             </Reveal>
           ))}

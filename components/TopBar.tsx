@@ -9,16 +9,16 @@ const TopBar: React.FC = () => {
           href="https://www.facebook.com/share/1b5dNFdrt1/?mibextid=wwXIfr" 
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white/40 hover:text-[#E62E2E] transition-colors text-sm"
+          className="text-white/70 hover:text-[#E62E2E] transition-colors text-sm"
           aria-label="Facebook"
         >
           <i className="fa-brands fa-facebook-f"></i>
         </a>
         <a 
-          href="https://mail.google.com/mail/?view=cm&fs=1&to=industriasjairo1581@hotmail.com" 
+          href="https://mail.google.com/mail/?view=cm&fs=1&to=extractoresindustrialesfanca@gmail.com" 
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white/40 hover:text-[#E62E2E] transition-colors text-sm"
+          className="text-white/70 hover:text-[#E62E2E] transition-colors text-sm"
           aria-label="Gmail"
         >
           <i className="fa-solid fa-envelope"></i>
@@ -27,7 +27,7 @@ const TopBar: React.FC = () => {
           href="https://wa.me/50660013108" 
           target="_blank"
           rel="noopener noreferrer"
-          className="text-white/40 hover:text-[#E62E2E] transition-colors text-sm"
+          className="text-white/70 hover:text-[#E62E2E] transition-colors text-sm"
           aria-label="WhatsApp"
         >
           <i className="fa-brands fa-whatsapp"></i>
@@ -36,8 +36,8 @@ const TopBar: React.FC = () => {
 
       {/* Esquina Derecha: Contacto */}
       <div className="flex items-center gap-3">
-        <i className="fa-solid fa-phone text-[#E62E2E] text-[10px]"></i>
-        <span className="text-white text-[11px] font-black tracking-[0.15em]">
+        <i className="fa-solid fa-phone text-[#E62E2E] text-xs"></i>
+        <span className="text-white text-[13px] font-black tracking-[0.15em]">
           6001-3108
         </span>
       </div>

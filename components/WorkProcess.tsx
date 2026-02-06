@@ -32,12 +32,12 @@ const WorkProcess: React.FC = () => {
         {/* Encabezado Simple Moderno */}
         <div className="mb-20">
           <Reveal width="100%">
-            <span className="text-[10px] font-black uppercase tracking-[0.4em] text-[#E62E2E] mb-4 block">Cómo trabajamos</span>
+            <span className="text-[12px] font-black uppercase tracking-[0.4em] text-[#E62E2E] mb-4 block">Cómo trabajamos</span>
           </Reveal>
           <Reveal width="100%" delay={100}>
             <h2 className="text-4xl md:text-5xl font-black text-[#051130] uppercase tracking-tighter">
               Nuestro <br />
-              <span className="text-gray-300">Proceso</span>
+              <span className="text-gray-400">Proceso</span>
             </h2>
           </Reveal>
         </div>
@@ -50,8 +50,8 @@ const WorkProcess: React.FC = () => {
                 <div className="flex flex-col space-y-6">
                   {/* Número Minimalista */}
                   <div className="flex items-center gap-4">
-                    <span className="text-sm font-black text-[#E62E2E]">{step.id}</span>
-                    <div className="h-[1px] flex-grow bg-gray-100 group-hover:bg-[#E62E2E] transition-colors duration-500"></div>
+                    <span className="text-base font-black text-[#E62E2E]">{step.id}</span>
+                    <div className="h-[1px] flex-grow bg-gray-200 group-hover:bg-[#E62E2E] transition-colors duration-500"></div>
                   </div>
                   
                   {/* Contenido */}
@@ -59,7 +59,7 @@ const WorkProcess: React.FC = () => {
                     <h3 className="text-xl font-bold text-[#051130] group-hover:text-[#E62E2E] transition-colors">
                       {step.title}
                     </h3>
-                    <p className="text-gray-500 text-sm leading-relaxed font-light">
+                    <p className="text-gray-700 text-base leading-relaxed font-medium">
                       {step.desc}
                     </p>
                   </div>
@@ -70,11 +70,11 @@ const WorkProcess: React.FC = () => {
         </div>
 
         {/* Botón de Acción Sutil */}
-        <div className="mt-20 pt-10 border-t border-gray-50 flex justify-center">
+        <div className="mt-20 pt-10 border-t border-gray-100 flex justify-center">
           <Reveal delay={600}>
             <a 
               href="#consultation" 
-              className="text-[10px] font-black uppercase tracking-[0.3em] text-[#051130] flex items-center gap-4 hover:text-[#E62E2E] transition-all"
+              className="text-[12px] font-black uppercase tracking-[0.3em] text-[#051130] flex items-center gap-4 hover:text-[#E62E2E] transition-all"
             >
               Más detalles sobre nuestro trabajo
               <i className="fa-solid fa-arrow-right-long"></i>

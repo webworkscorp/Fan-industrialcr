@@ -22,7 +22,6 @@ const WhyChooseUs: React.FC = () => {
           </Reveal>
           
           <Reveal width="100%" delay={200}>
-            {/* Tamaño de fuente ajustado para ser menos extrambótico y no salir del borde */}
             <h2 className="text-4xl md:text-6xl font-black text-[#051130] leading-none tracking-tighter uppercase mb-8">
               Hongos eólicos: <br />
               <span className="text-[#E62E2E]">una buena decisión</span>
@@ -37,11 +36,10 @@ const WhyChooseUs: React.FC = () => {
           </Reveal>
         </div>
 
-        {/* Visual de Producto */}
+        {/* Visual de Producto - Con Reveal, sin zoom */}
         <div className="w-full max-w-5xl mx-auto">
-          <Reveal width="100%" delay={300} duration={1200}>
-            <div className="relative group">
-              {/* Contenedor rectangular limpio */}
+          <Reveal width="100%" direction="up">
+            <div className="relative">
               <div className="w-full overflow-hidden border border-gray-100 bg-white shadow-xl aspect-video md:aspect-[21/9]">
                 <img 
                   src="https://i.imgur.com/8zwtHJx.jpeg" 
@@ -53,7 +51,7 @@ const WhyChooseUs: React.FC = () => {
           </Reveal>
         </div>
 
-        {/* Listado de Beneficios de Excelencia - Sin cuadros, con checks */}
+        {/* Listado de Beneficios */}
         <div className="mt-20 max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-y-10 gap-x-8">
           {[
             'Ahorro energético',
@@ -64,7 +62,7 @@ const WhyChooseUs: React.FC = () => {
             <Reveal key={i} delay={400 + (i * 100)} width="100%">
               <div className="flex items-start gap-4 group">
                 <div className="mt-1">
-                  <i className="fa-solid fa-square-check text-[#E62E2E] text-xl transition-transform group-hover:scale-110"></i>
+                  <i className="fa-solid fa-square-check text-[#E62E2E] text-xl"></i>
                 </div>
                 <p className="text-[13px] font-black text-[#051130] uppercase tracking-wider leading-tight">
                   {benefit}

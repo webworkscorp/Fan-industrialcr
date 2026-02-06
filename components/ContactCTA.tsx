@@ -22,7 +22,7 @@ const ContactCTA: React.FC = () => {
             </div>
           </div>
           <a 
-            href="https://mail.google.com/mail/?view=cm&fs=1&to=industriasjairo1581@hotmail.com"
+            href="https://mail.google.com/mail/?view=cm&fs=1&to=extractoresindustrialesfanca@gmail.com"
             target="_blank"
             rel="noopener noreferrer" 
             className="bg-white text-[#051130] px-8 py-4 rounded-xl font-extrabold hover:bg-[#051130] hover:text-white transition-all shadow-lg self-center text-sm uppercase tracking-widest"
