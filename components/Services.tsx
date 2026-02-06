@@ -49,11 +49,11 @@ const ProductBox = ({
       {Array.isArray(image) ? (
         <div className="flex w-full h-full gap-2">
           {image.map((img, idx) => (
-            <div key={idx} className="flex-1 h-full flex items-center justify-center overflow-hidden">
+            <div key={idx} className="flex-1 h-full flex items-center justify-center overflow-hidden bg-gray-50/50">
               <img 
                 src={img} 
                 alt={`${title} - Vista ${idx + 1}`} 
-                className={`w-full h-full ${imageFit === 'cover' ? 'object-cover' : 'object-contain'}`} 
+                className={`w-full h-full ${imageFit === 'cover' ? 'object-cover' : 'object-contain'} group-hover:scale-105 transition-transform duration-700`} 
               />
             </div>
           ))}
@@ -62,7 +62,7 @@ const ProductBox = ({
         <img 
           src={image} 
           alt={title} 
-          className={`w-full h-full ${imageFit === 'cover' ? 'object-cover' : 'object-contain'}`} 
+          className={`w-full h-full ${imageFit === 'cover' ? 'object-cover' : 'object-contain'} group-hover:scale-105 transition-transform duration-700`} 
         />
       ) : (
         <div className="w-full h-full flex items-center justify-center">
@@ -205,11 +205,13 @@ const Services: React.FC = () => {
           <Reveal width="100%">
             <SectionNumber id="03." label="Ductería & Rejillas" />
           </Reveal>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
             <ProductBox 
               title="Ductos" 
               image={["https://i.imgur.com/XNgkR3U.png", "https://i.imgur.com/CY4HzsM.png", "https://i.imgur.com/zweP36Y.png"]}
               imagePadding="p-0"
+              aspect="aspect-video"
+              className="lg:col-span-1"
             >
               <div className="space-y-4 pt-2">
                 <p className="text-[12px] font-black text-[#E62E2E] uppercase tracking-widest mb-2">Fabricación:</p>
@@ -224,6 +226,9 @@ const Services: React.FC = () => {
               title="Ductos & Rejillas" 
               subtitle="Sistema Reflector" 
               image={["https://i.imgur.com/47QAgkx.png", "https://i.imgur.com/l8bF8Kz.png", "https://i.imgur.com/zweP36Y.png"]}
+              imagePadding="p-0"
+              aspect="aspect-video"
+              className="lg:col-span-1"
             >
               <div className="space-y-4 pt-2">
                 <p className="text-[12px] font-black text-[#E62E2E] uppercase tracking-widest mb-2">Función:</p>
@@ -239,6 +244,7 @@ const Services: React.FC = () => {
               title="Estructura Codo" 
               subtitle="Base Soporte" 
               image={["https://i.imgur.com/s9T68hI.png", "https://i.imgur.com/9yknNVH.png"]}
+              aspect="aspect-video"
             >
               <p className="text-[12px] text-gray-500 font-bold uppercase mb-4 leading-tight">Soporte para extractor o inyector.</p>
               <div className="space-y-1">
@@ -250,9 +256,10 @@ const Services: React.FC = () => {
 
             <ProductBox 
               title="Filtro Sintético" 
-              image={["https://i.imgur.com/qlliXvl.png", "https://i.imgur.com/9IX7N3h.png"]}
+              image={["https://i.imgur.com/1Fus8UY.png", "https://i.imgur.com/edHJt7Q.png"]}
               imagePadding="p-0"
               imageFit="cover"
+              aspect="aspect-video"
             >
               <p className="text-[13px] text-[#051130] font-bold uppercase leading-relaxed mb-6">
                 Evita el ingreso de polvo durante el proceso de pintura.
