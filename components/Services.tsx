@@ -24,18 +24,32 @@ const TechnicalTable = ({ headers, data }: { headers: string[], data: any[] }) =
   </div>
 );
 
-const ProductBox = ({ title, subtitle, image, children, imagePadding = "p-2" }: { title: string, subtitle?: string, image: string | string[], children?: React.ReactNode, imagePadding?: string }) => (
+const ProductBox = ({ 
+  title, 
+  subtitle, 
+  image, 
+  children, 
+  imagePadding = "p-2",
+  imageFit = "contain" 
+}: { 
+  title: string, 
+  subtitle?: string, 
+  image: string | string[], 
+  children?: React.ReactNode, 
+  imagePadding?: string,
+  imageFit?: "contain" | "cover"
+}) => (
   <div className="bg-white border border-gray-200 p-8 flex flex-col h-full hover:border-[#E62E2E]/20 transition-all duration-500 group shadow-sm">
     {/* Contenedor de Imagen: aspect-square - Estático */}
     <div className={`aspect-square mb-8 overflow-hidden bg-white relative border border-gray-100 flex items-center justify-center ${imagePadding}`}>
       {Array.isArray(image) ? (
         <div className="flex w-full h-full gap-2">
           {image.map((img, idx) => (
-            <div key={idx} className="w-1/2 h-full flex items-center justify-center">
+            <div key={idx} className="w-1/2 h-full flex items-center justify-center overflow-hidden">
               <img 
                 src={img} 
                 alt={`${title} - Vista ${idx + 1}`} 
-                className="max-w-full max-h-full object-contain" 
+                className={`w-full h-full ${imageFit === 'cover' ? 'object-cover' : 'object-contain'}`} 
               />
             </div>
           ))}
@@ -44,7 +58,7 @@ const ProductBox = ({ title, subtitle, image, children, imagePadding = "p-2" }: 
         <img 
           src={image} 
           alt={title} 
-          className="w-full h-full object-contain" 
+          className={`w-full h-full ${imageFit === 'cover' ? 'object-cover' : 'object-contain'}`} 
         />
       ) : (
         <div className="w-full h-full flex items-center justify-center">
@@ -103,14 +117,14 @@ const Services: React.FC = () => {
             <ProductBox 
               title="Axial de Transmisión" 
               subtitle="Poleas y Fajas" 
-              image="https://i.imgur.com/nS2Jolx.png"
+              image={["https://i.imgur.com/gJCfCUA.png", "https://i.imgur.com/ALsFcwS.png"]}
             >
               <TechnicalTable headers={['Medida', 'Potencia', 'Corriente']} data={[{ m: '30"', p: '1 HP', c: 'Mono / Tri' }, { m: '36"', p: '1.5 HP', c: 'Mono / Tri' }, { m: '42"', p: '2 HP', c: 'Mono / Tri' }, { m: '48"', p: '3 HP', c: 'Mono / Tri' }]} />
             </ProductBox>
             <ProductBox 
               title="Axial Nacional" 
               subtitle="Fabricación" 
-              image="https://i.imgur.com/9VT0axf.png"
+              image={["https://i.imgur.com/KCisyXq.png", "https://i.imgur.com/stDiIMW.png"]}
             >
               <TechnicalTable headers={['Medida', 'Voltaje', 'Corriente']} data={[{ m: '14"', v: '110/220V', c: 'Monofásico' }, { m: '16"', v: '110/220V', c: 'Monofásico' }, { m: '18"', v: '110/220V', c: 'Monofásico' }, { m: '20"', v: '110/220V', c: 'Monofásico' }, { m: '22"', v: '110/220V', c: 'Monofásico' }, { m: '24"', v: '110/220V', c: 'Monofásico' }]} />
             </ProductBox>
@@ -140,7 +154,7 @@ const Services: React.FC = () => {
 
             <ProductBox 
               title="Hongo Eléctrico" 
-              image="https://i.imgur.com/YXT6lve.png"
+              image={["https://i.imgur.com/YXT6lve.png", "https://i.imgur.com/x2It4rc.png"]}
             >
               <div className="pt-4">
                 <p className="text-[14px] font-bold text-[#051130] uppercase leading-tight">
@@ -152,7 +166,7 @@ const Services: React.FC = () => {
             <ProductBox 
               title="Extractor Centrífugo" 
               subtitle="Turbina Alta Presión" 
-              image="https://i.imgur.com/Mpjw8YB.png"
+              image={["https://i.imgur.com/Mpjw8YB.png", "https://i.imgur.com/bTbmgeg.png"]}
             >
               <div className="space-y-4 pt-4">
                 <p className="text-[12px] font-bold text-[#051130] uppercase">Motores Disponibles:</p>
@@ -177,7 +191,7 @@ const Services: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
             <ProductBox 
               title="Ductos" 
-              image="https://i.imgur.com/Gllk9kl.png"
+              image={["https://i.imgur.com/XNgkR3U.png", "https://i.imgur.com/CY4HzsM.png"]}
               imagePadding="p-0"
             >
               <div className="space-y-4 pt-2">
@@ -192,7 +206,7 @@ const Services: React.FC = () => {
             <ProductBox 
               title="Ductos & Rejillas" 
               subtitle="Sistema Reflector" 
-              image="https://i.imgur.com/eKKmyKY.png"
+              image={["https://i.imgur.com/9c7K8hI.png", "https://i.imgur.com/KHsCWA3.png"]}
             >
               <div className="space-y-4 pt-2">
                 <p className="text-[12px] font-black text-[#E62E2E] uppercase tracking-widest mb-2">Función:</p>
@@ -207,7 +221,7 @@ const Services: React.FC = () => {
             <ProductBox 
               title="Estructura Codo" 
               subtitle="Base Soporte" 
-              image="https://i.imgur.com/s9T68hI.png"
+              image={["https://i.imgur.com/s9T68hI.png", "https://i.imgur.com/9yknNVH.png"]}
             >
               <p className="text-[12px] text-gray-500 font-bold uppercase mb-4 leading-tight">Soporte para extractor o inyector.</p>
               <div className="space-y-1">
@@ -219,8 +233,9 @@ const Services: React.FC = () => {
 
             <ProductBox 
               title="Filtro Sintético" 
-              image="https://i.imgur.com/qlliXvl.png"
+              image={["https://i.imgur.com/qlliXvl.png", "https://i.imgur.com/9IX7N3h.png"]}
               imagePadding="p-0"
+              imageFit="cover"
             >
               <p className="text-[13px] text-[#051130] font-bold uppercase leading-relaxed mb-6">
                 Evita el ingreso de polvo durante el proceso de pintura.
