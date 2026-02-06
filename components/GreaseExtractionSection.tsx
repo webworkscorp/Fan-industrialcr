@@ -65,14 +65,23 @@ const GreaseExtractionSection: React.FC = () => {
               </div>
             </Reveal>
 
-            {/* Imagen de Portada Profesional - Con Reveal, sin zoom */}
+            {/* Grid de Imágenes Profesionales - Con Reveal, sin zoom */}
             <Reveal width="100%" delay={250} direction="left">
-              <div className="mb-10 rounded-xl overflow-hidden border border-gray-200 shadow-lg">
-                <img 
-                  src="https://i.imgur.com/PrTVdVi.jpeg" 
-                  alt="Instalación profesional de extracción de grasa" 
-                  className="w-full h-auto object-cover"
-                />
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+                <div className="rounded-xl overflow-hidden border border-gray-200 shadow-lg aspect-[4/3]">
+                  <img 
+                    src="https://i.imgur.com/PrTVdVi.jpeg" 
+                    alt="Instalación profesional de extracción de grasa 1" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div className="rounded-xl overflow-hidden border border-gray-200 shadow-lg aspect-[4/3]">
+                  <img 
+                    src="https://i.imgur.com/bFpiLs6.jpeg" 
+                    alt="Instalación profesional de extracción de grasa 2" 
+                    className="w-full h-full object-cover"
+                  />
+                </div>
               </div>
             </Reveal>
 

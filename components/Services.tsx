@@ -256,9 +256,9 @@ const Services: React.FC = () => {
 
             <ProductBox 
               title="Filtro Sintético" 
-              image={["https://i.imgur.com/1Fus8UY.png", "https://i.imgur.com/edHJt7Q.png"]}
-              imagePadding="p-0"
-              imageFit="cover"
+              image={["https://i.imgur.com/1Fus8UY.png", "https://i.imgur.com/JliRGGe.png"]}
+              imagePadding="p-4"
+              imageFit="contain"
               aspect="aspect-video"
             >
               <p className="text-[13px] text-[#051130] font-bold uppercase leading-relaxed mb-6">
