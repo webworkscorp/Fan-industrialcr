@@ -26,9 +26,21 @@ const TechnicalTable = ({ headers, data }: { headers: string[], data: any[] }) =
 
 const ProductBox = ({ title, subtitle, image, children }: { title: string, subtitle?: string, image: string, children?: React.ReactNode }) => (
   <div className="bg-white border border-gray-100 p-8 flex flex-col h-full hover:border-[#E62E2E]/20 transition-all duration-500 group">
-    {/* Espacio de imagen en blanco (sin imagen, sin overlay) */}
-    <div className="aspect-video mb-8 overflow-hidden bg-white relative">
+    {/* Contenedor de Imagen: Sin recorte (object-contain) y sin animación */}
+    <div className="aspect-video mb-8 overflow-hidden bg-white relative border border-gray-100 flex items-center justify-center p-2">
+      {image ? (
+        <img 
+          src={image} 
+          alt={title} 
+          className="w-full h-full object-contain" 
+        />
+      ) : (
+        <div className="w-full h-full flex items-center justify-center">
+          <i className="fa-solid fa-fan text-gray-200 text-4xl animate-spin-slow"></i>
+        </div>
+      )}
     </div>
+    
     <div className="flex-grow">
       <h3 className="text-2xl font-black text-[#051130] uppercase tracking-tighter mb-1 leading-none">{title}</h3>
       {subtitle && <p className="text-[10px] font-black text-[#E62E2E] uppercase tracking-[0.2em] mb-4">{subtitle}</p>}
@@ -56,7 +68,7 @@ const Services: React.FC = () => {
     <section className="py-32 bg-white overflow-hidden" id="services">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
         
-        {/* Encabezado Principal - Estilo Identidad Técnica */}
+        {/* Encabezado Principal */}
         <div className="mb-24">
           <Reveal width="100%">
             <div className="flex items-center gap-3 mb-4">
@@ -77,17 +89,29 @@ const Services: React.FC = () => {
           </Reveal>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             <Reveal delay={100} width="100%" className="h-full">
-              <ProductBox title="Axial de Transmisión" subtitle="Poleas y Fajas" image="">
+              <ProductBox 
+                title="Axial de Transmisión" 
+                subtitle="Poleas y Fajas" 
+                image="https://i.imgur.com/2OgDX2P.jpeg"
+              >
                 <TechnicalTable headers={['Medida', 'Potencia', 'Corriente']} data={[{ m: '30"', p: '1 HP', c: 'Mono / Tri' }, { m: '36"', p: '1.5 HP', c: 'Mono / Tri' }, { m: '42"', p: '2 HP', c: 'Mono / Tri' }, { m: '48"', p: '3 HP', c: 'Mono / Tri' }]} />
               </ProductBox>
             </Reveal>
             <Reveal delay={200} width="100%" className="h-full">
-              <ProductBox title="Axial Nacional" subtitle="Fabricación" image="">
+              <ProductBox 
+                title="Axial Nacional" 
+                subtitle="Fabricación" 
+                image="https://i.imgur.com/p8GHzal.jpeg"
+              >
                 <TechnicalTable headers={['Medida', 'Voltaje', 'Corriente']} data={[{ m: '14"', v: '110/220V', c: 'Monofásico' }, { m: '16"', v: '110/220V', c: 'Monofásico' }, { m: '18"', v: '110/220V', c: 'Monofásico' }, { m: '20"', v: '110/220V', c: 'Monofásico' }, { m: '22"', v: '110/220V', c: 'Monofásico' }, { m: '24"', v: '110/220V', c: 'Monofásico' }]} />
               </ProductBox>
             </Reveal>
             <Reveal delay={300} width="100%" className="h-full">
-              <ProductBox title="Axial Importado" subtitle="Voltaje 110V" image="">
+              <ProductBox 
+                title="Axial Importado" 
+                subtitle="Voltaje 110V" 
+                image="https://i.imgur.com/Va84NNs.jpeg"
+              >
                 <TechnicalTable headers={['Medida', 'Pot.', 'Caudal', 'RPM']} data={[{ m: '12"', p: '130W', c: '1130 CFM', r: '1400' }, { m: '16"', p: '200W', c: '2400 CFM', r: '1400' }, { m: '18"', p: '380W', c: '3530 CFM', r: '1400' }, { m: '24"', p: '380W', c: '3530 CFM', r: '1400' }]} />
               </ProductBox>
             </Reveal>
@@ -101,13 +125,21 @@ const Services: React.FC = () => {
           </Reveal>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             <Reveal delay={100} width="100%" className="h-full">
-              <ProductBox title="Hongo Eólico" subtitle="Ventilación Ambiental" image="">
+              <ProductBox 
+                title="Hongo Eólico" 
+                subtitle="Ventilación Ambiental" 
+                image="https://i.imgur.com/7qxXV62.jpeg"
+              >
                 <TechnicalTable headers={['Medida', 'Material', 'Peso', 'Caudal']} data={[{ m: '12"', mt: 'Alu', p: '2 kg', c: '350 CFM' }, { m: '14"', mt: 'Alu', p: '3 kg', c: '600 CFM' }, { m: '24"', mt: 'Galv', p: '15 kg', c: '2350 CFM' }, { m: '28"', mt: 'Acero', p: '20 kg', c: '2850 CFM' }]} />
               </ProductBox>
             </Reveal>
 
             <Reveal delay={200} width="100%" className="h-full">
-              <ProductBox title="Extractor Centrífugo" subtitle="Turbina Alta Presión" image="">
+              <ProductBox 
+                title="Extractor Centrífugo" 
+                subtitle="Turbina Alta Presión" 
+                image="https://i.imgur.com/PXB9xI8.jpeg"
+              >
                 <div className="space-y-4 pt-4">
                   <p className="text-[11px] font-bold text-[#051130] uppercase">Motores Disponibles:</p>
                   <div className="flex flex-wrap gap-2">
@@ -124,7 +156,11 @@ const Services: React.FC = () => {
             </Reveal>
 
             <Reveal delay={300} width="100%" className="h-full">
-              <ProductBox title="Extracción de Grasa" subtitle="Equipamiento Cocinas" image="">
+              <ProductBox 
+                title="Extracción de Grasa" 
+                subtitle="Equipamiento Cocinas" 
+                image="https://i.imgur.com/tBXnyu7.jpeg"
+              >
                 <div className="space-y-4 pt-2">
                   <ul className="space-y-2">
                     {['Campana profesional', 'Ducto Inox', 'Extractor a medida'].map(item => (
@@ -149,7 +185,10 @@ const Services: React.FC = () => {
           </Reveal>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
             <Reveal delay={100} width="100%" className="h-full">
-              <ProductBox title="Ductos" image="">
+              <ProductBox 
+                title="Ductos" 
+                image="https://i.imgur.com/gwD6mJj.jpeg"
+              >
                 <div className="space-y-4 pt-2">
                   <p className="text-[10px] font-black text-[#E62E2E] uppercase tracking-widest mb-2">Fabricación:</p>
                   <div className="space-y-3">
@@ -161,7 +200,11 @@ const Services: React.FC = () => {
             </Reveal>
 
             <Reveal delay={200} width="100%" className="h-full">
-              <ProductBox title="Ductos & Rejillas" subtitle="Sistema Reflector" image="">
+              <ProductBox 
+                title="Ductos & Rejillas" 
+                subtitle="Sistema Reflector" 
+                image="https://i.imgur.com/ZDSWytK.jpeg"
+              >
                 <div className="space-y-4 pt-2">
                   <p className="text-[10px] font-black text-[#E62E2E] uppercase tracking-widest mb-2">Función:</p>
                   <ul className="text-[11px] font-bold text-gray-500 uppercase space-y-4">
@@ -174,7 +217,11 @@ const Services: React.FC = () => {
             </Reveal>
 
             <Reveal delay={300} width="100%" className="h-full">
-              <ProductBox title="Estructura Codo" subtitle="Base Soporte" image="">
+              <ProductBox 
+                title="Estructura Codo" 
+                subtitle="Base Soporte" 
+                image="https://i.imgur.com/LW3IXZ1.jpeg"
+              >
                 <p className="text-[11px] text-gray-400 font-bold uppercase mb-4 leading-tight">Soporte para extractor o inyector.</p>
                 <div className="space-y-1">
                   {['Inox 430', 'Inox 304', 'Galvanizado'].map(mat => (
@@ -185,7 +232,10 @@ const Services: React.FC = () => {
             </Reveal>
 
             <Reveal delay={400} width="100%" className="h-full">
-              <ProductBox title="Filtro Sintético" image="">
+              <ProductBox 
+                title="Filtro Sintético" 
+                image="https://i.imgur.com/vkjDxIn.jpeg"
+              >
                 <p className="text-[12px] text-[#051130] font-bold uppercase leading-relaxed mb-6">
                   Evita el ingreso de polvo durante el proceso de pintura.
                 </p>

@@ -24,7 +24,7 @@ const TopBar: React.FC = () => {
           <i className="fa-solid fa-envelope"></i>
         </a>
         <a 
-          href="https://wa.me/50685436323" 
+          href="https://wa.me/50660013108" 
           target="_blank"
           rel="noopener noreferrer"
           className="text-white/40 hover:text-[#E62E2E] transition-colors text-sm"
@@ -38,7 +38,7 @@ const TopBar: React.FC = () => {
       <div className="flex items-center gap-3">
         <i className="fa-solid fa-phone text-[#E62E2E] text-[10px]"></i>
         <span className="text-white text-[11px] font-black tracking-[0.15em]">
-          8543-63-23 <span className="text-[#E62E2E] mx-1">•</span> 6326-98-62
+          6001-3108
         </span>
       </div>
     </div>

@@ -27,7 +27,7 @@ const ConsultationForm: React.FC = () => {
                     `*Detalles del proyecto:* ${formData.details}`;
 
     // Abrir WhatsApp con el mensaje prellenado
-    const whatsappUrl = `https://wa.me/50685436323?text=${message}`;
+    const whatsappUrl = `https://wa.me/50660013108?text=${message}`;
     window.open(whatsappUrl, '_blank');
   };
 

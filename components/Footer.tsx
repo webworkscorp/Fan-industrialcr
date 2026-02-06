@@ -4,7 +4,7 @@ import { Reveal } from './Reveal';
 const Footer: React.FC = () => {
   const socialLinks = [
     { prefix: 'fa-brands', icon: 'fa-facebook-f', href: 'https://www.facebook.com/share/1b5dNFdrt1/?mibextid=wwXIfr', label: 'Facebook' },
-    { prefix: 'fa-brands', icon: 'fa-whatsapp', href: 'https://wa.me/50685436323', label: 'WhatsApp' },
+    { prefix: 'fa-brands', icon: 'fa-whatsapp', href: 'https://wa.me/50660013108', label: 'WhatsApp' },
     { prefix: 'fa-solid', icon: 'fa-envelope', href: 'https://mail.google.com/mail/?view=cm&fs=1&to=industriasjairo1581@hotmail.com', label: 'Gmail' }
   ];
 
@@ -64,11 +64,8 @@ const Footer: React.FC = () => {
             <div className="space-y-3">
               <span className="text-[10px] font-black uppercase tracking-[0.2em] text-gray-400">Teléfonos</span>
               <div className="flex flex-col gap-1">
-                <a href="tel:85436323" className="text-2xl md:text-3xl font-black text-[#051130] hover:text-[#E62E2E] transition-colors tracking-tighter">
-                  8543-63-23
-                </a>
-                <a href="tel:63269862" className="text-2xl md:text-3xl font-black text-[#051130] hover:text-[#E62E2E] transition-colors tracking-tighter">
-                  6326-98-62
+                <a href="tel:60013108" className="text-2xl md:text-3xl font-black text-[#051130] hover:text-[#E62E2E] transition-colors tracking-tighter">
+                  6001-3108
                 </a>
               </div>
             </div>

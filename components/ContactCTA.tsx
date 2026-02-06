@@ -18,7 +18,7 @@ const ContactCTA: React.FC = () => {
             </div>
             <div>
               <p className="text-white/70 text-xs font-bold uppercase">Atención Directa</p>
-              <p className="text-white font-bold text-lg">8543-63-23</p>
+              <p className="text-white font-bold text-lg">6001-3108</p>
             </div>
           </div>
           <a 
