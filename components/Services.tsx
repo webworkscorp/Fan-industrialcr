@@ -12,7 +12,6 @@ const TechnicalTable = ({ headers, data }: { headers: string[], data: any[] }) =
         </tr>
       </thead>
       <tbody>
-        {/* Fix: Added missing closing parenthesis for data.map to resolve syntax error */}
         {data.map((row, i) => (
           <tr key={i} className="border-b border-gray-100 last:border-0">
             {Object.values(row).map((val: any, j) => (
@@ -41,7 +40,6 @@ const ProductImage = ({ src, alt, fit = 'contain' }: { src: string, alt: string,
   );
 };
 
-/* Fix: Corrected children type from React.Node to React.ReactNode */
 const ProductBox = ({ 
   title, 
   subtitle, 
@@ -134,7 +132,7 @@ const Services: React.FC = () => {
           </div>
         </div>
 
-        {/* 02. Techo & Grasa */}
+        {/* 02. Techo & Especialidades */}
         <div className="mb-24">
           <Reveal width="100%">
             <SectionNumber id="02." label="Techo & Especialidades" />
@@ -156,6 +154,7 @@ const Services: React.FC = () => {
                 </div>
               </div>
             </ProductBox>
+            <ProductBox title="Filtros Sintéticos" image={["https://i.imgur.com/MKE9WTP.png", "https://i.imgur.com/KY82Zuz.png"]} />
           </div>
         </div>
 
