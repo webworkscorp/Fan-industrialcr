@@ -51,7 +51,7 @@ const AboutUs: React.FC = () => {
             <Reveal direction="left" delay={400} width="100%">
               <div className="space-y-8">
                 <p className="text-2xl md:text-3xl font-bold text-[#051130] leading-tight tracking-tight border-l-4 border-[#E62E2E] pl-8">
-                  Somos una empresa orgullosamente costarricense que cuenta con <span className="text-[#E62E2E]">12 años de experiencia</span> proporcionando soluciones a nuestros clientes.
+                  Somos una empresa orgullosamente costarricense que cuenta con <span className="text-[#E62E2E]">25 años de experiencia</span> proporcionando soluciones a nuestros clientes.
                 </p>
                 
                 <p className="text-gray-700 text-lg leading-relaxed font-medium">

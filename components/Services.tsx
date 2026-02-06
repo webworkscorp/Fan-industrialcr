@@ -30,22 +30,26 @@ const ProductBox = ({
   image, 
   children, 
   imagePadding = "p-2",
-  imageFit = "contain" 
+  imageFit = "contain",
+  aspect = "aspect-square",
+  className = ""
 }: { 
   title: string, 
   subtitle?: string, 
   image: string | string[], 
   children?: React.ReactNode, 
   imagePadding?: string,
-  imageFit?: "contain" | "cover"
+  imageFit?: "contain" | "cover",
+  aspect?: string,
+  className?: string
 }) => (
-  <div className="bg-white border border-gray-200 p-8 flex flex-col h-full hover:border-[#E62E2E]/20 transition-all duration-500 group shadow-sm">
-    {/* Contenedor de Imagen: aspect-square - Estático */}
-    <div className={`aspect-square mb-8 overflow-hidden bg-white relative border border-gray-100 flex items-center justify-center ${imagePadding}`}>
+  <div className={`bg-white border border-gray-200 p-8 flex flex-col h-full hover:border-[#E62E2E]/20 transition-all duration-500 group shadow-sm ${className}`}>
+    {/* Contenedor de Imagen */}
+    <div className={`${aspect} mb-8 overflow-hidden bg-white relative border border-gray-100 flex items-center justify-center ${imagePadding}`}>
       {Array.isArray(image) ? (
         <div className="flex w-full h-full gap-2">
           {image.map((img, idx) => (
-            <div key={idx} className="w-1/2 h-full flex items-center justify-center overflow-hidden">
+            <div key={idx} className="flex-1 h-full flex items-center justify-center overflow-hidden">
               <img 
                 src={img} 
                 alt={`${title} - Vista ${idx + 1}`} 
@@ -117,14 +121,19 @@ const Services: React.FC = () => {
             <ProductBox 
               title="Axial de Transmisión" 
               subtitle="Poleas y Fajas" 
-              image={["https://i.imgur.com/gJCfCUA.png", "https://i.imgur.com/ALsFcwS.png"]}
+              image={["https://i.imgur.com/KCisyXq.png", "https://i.imgur.com/stDiIMW.png"]}
             >
               <TechnicalTable headers={['Medida', 'Potencia', 'Corriente']} data={[{ m: '30"', p: '1 HP', c: 'Mono / Tri' }, { m: '36"', p: '1.5 HP', c: 'Mono / Tri' }, { m: '42"', p: '2 HP', c: 'Mono / Tri' }, { m: '48"', p: '3 HP', c: 'Mono / Tri' }]} />
             </ProductBox>
             <ProductBox 
+              title="Axial de Transmisión Importado" 
+              subtitle="Poleas y Fajas" 
+              image={["https://i.imgur.com/zapuYQd.png", "https://i.imgur.com/JbF0Q7m.png"]}
+            />
+            <ProductBox 
               title="Axial Nacional" 
               subtitle="Fabricación" 
-              image={["https://i.imgur.com/KCisyXq.png", "https://i.imgur.com/stDiIMW.png"]}
+              image={["https://i.imgur.com/gJCfCUA.png", "https://i.imgur.com/ALsFcwS.png"]}
             >
               <TechnicalTable headers={['Medida', 'Voltaje', 'Corriente']} data={[{ m: '14"', v: '110/220V', c: 'Monofásico' }, { m: '16"', v: '110/220V', c: 'Monofásico' }, { m: '18"', v: '110/220V', c: 'Monofásico' }, { m: '20"', v: '110/220V', c: 'Monofásico' }, { m: '22"', v: '110/220V', c: 'Monofásico' }, { m: '24"', v: '110/220V', c: 'Monofásico' }]} />
             </ProductBox>
@@ -135,6 +144,14 @@ const Services: React.FC = () => {
             >
               <TechnicalTable headers={['Medida', 'Pot.', 'Caudal', 'RPM']} data={[{ m: '12"', p: '130W', c: '1130 CFM', r: '1400' }, { m: '16"', p: '200W', c: '2400 CFM', r: '1400' }, { m: '18"', p: '380W', c: '3530 CFM', r: '1400' }, { m: '24"', p: '380W', c: '3530 CFM', r: '1400' }]} />
             </ProductBox>
+            <ProductBox 
+              title="Abanicos Industriales de Pared y Piso" 
+              subtitle="Alto Desempeño" 
+              image={["https://i.imgur.com/CjHYYPm.png", "https://i.imgur.com/vtAhpwH.png"]}
+              className="lg:col-span-2"
+              aspect="aspect-[21/9] md:aspect-[16/7]"
+              imagePadding="p-0"
+            />
           </div>
         </div>
 
@@ -191,7 +208,7 @@ const Services: React.FC = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
             <ProductBox 
               title="Ductos" 
-              image={["https://i.imgur.com/XNgkR3U.png", "https://i.imgur.com/CY4HzsM.png"]}
+              image={["https://i.imgur.com/XNgkR3U.png", "https://i.imgur.com/CY4HzsM.png", "https://i.imgur.com/zweP36Y.png"]}
               imagePadding="p-0"
             >
               <div className="space-y-4 pt-2">
@@ -206,7 +223,7 @@ const Services: React.FC = () => {
             <ProductBox 
               title="Ductos & Rejillas" 
               subtitle="Sistema Reflector" 
-              image={["https://i.imgur.com/9c7K8hI.png", "https://i.imgur.com/KHsCWA3.png"]}
+              image={["https://i.imgur.com/47QAgkx.png", "https://i.imgur.com/l8bF8Kz.png", "https://i.imgur.com/zweP36Y.png"]}
             >
               <div className="space-y-4 pt-2">
                 <p className="text-[12px] font-black text-[#E62E2E] uppercase tracking-widest mb-2">Función:</p>

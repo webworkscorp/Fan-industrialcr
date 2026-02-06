@@ -20,13 +20,13 @@ const Footer: React.FC = () => {
                 <span className="text-[12px] font-black uppercase tracking-[0.3em] text-[#051130]">Trayectoria y Confianza</span>
               </div>
               <p className="text-xl md:text-2xl font-bold text-[#051130] leading-tight tracking-tight uppercase">
-                Contamos con <span className="text-[#E62E2E]">12 años de experiencia</span> brindando soluciones especializadas que mejoran la calidad del aire, promoviendo la salud y seguridad en espacios industriales y comerciales.
+                Contamos con <span className="text-[#E62E2E]">25 años de experiencia</span> brindando soluciones especializadas que mejoran la calidad del aire, promoviendo la salud y seguridad en espacios industriales y comerciales.
               </p>
             </div>
             <div className="lg:col-span-4 flex lg:justify-end">
               <div className="hidden lg:block w-px h-24 bg-gray-200 mx-12"></div>
               <div className="flex flex-col justify-center">
-                <span className="text-5xl font-black text-[#051130] leading-none tracking-tighter">12+</span>
+                <span className="text-5xl font-black text-[#051130] leading-none tracking-tighter">25+</span>
                 <span className="text-[12px] font-black uppercase tracking-widest text-gray-600 mt-2">Años de Excelencia</span>
               </div>
             </div>
