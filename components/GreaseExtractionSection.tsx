@@ -10,14 +10,12 @@ const GreaseExtractionSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           
-          {/* Columna de Imagen (Chef) - Con Reveal de entrada */}
+          {/* Columna de Imagen (Chef) */}
           <div className="lg:col-span-5 relative mb-12 lg:mb-0 order-1 lg:order-1">
             <Reveal direction="right" width="100%">
               <div className="relative">
-                {/* Círculo decorativo detrás del chef */}
                 <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[120%] aspect-square bg-gradient-to-tr from-gray-200/50 to-transparent rounded-full -z-10"></div>
                 
-                {/* Imagen del Chef - Sin animación de zoom */}
                 <img 
                   src="https://i.imgur.com/3qQ462J.png" 
                   alt="Sistema de extracción para cocinas profesionales" 
@@ -25,7 +23,6 @@ const GreaseExtractionSection: React.FC = () => {
                   style={{ filter: 'drop-shadow(0 25px 25px rgba(0,0,0,0.15))' }}
                 />
 
-                {/* Badge flotante */}
                 <div className="absolute bottom-10 left-0 bg-white p-4 shadow-xl border-l-4 border-[#E62E2E]">
                   <p className="text-[11px] font-black text-[#051130] uppercase tracking-tighter leading-none">Especialidad en</p>
                   <p className="text-xl font-black text-[#E62E2E] uppercase tracking-tighter">cocina</p>
@@ -56,7 +53,6 @@ const GreaseExtractionSection: React.FC = () => {
                   Proteja su cocina y espacios de trabajo de plagas, suciedad impregnada y malos olores, utilizando sistemas de extracción de grasa de alto rendimiento.
                 </p>
                 
-                {/* Texto requerido: El sistema incluye Campana, ducto en acero inoxidable y extractor a la medida. */}
                 <div className="bg-[#E62E2E]/5 border-l-4 border-[#E62E2E] p-5 rounded-r-lg">
                   <p className="text-[#051130] font-black uppercase text-sm tracking-widest leading-relaxed">
                     El sistema incluye Campana, ducto en acero inoxidable y extractor a la medida.
@@ -65,7 +61,7 @@ const GreaseExtractionSection: React.FC = () => {
               </div>
             </Reveal>
 
-            {/* Grid de Imágenes Profesionales - Con Reveal, sin zoom */}
+            {/* Grid de Imágenes de Instalación */}
             <Reveal width="100%" delay={250} direction="left">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
                 <div className="rounded-xl overflow-hidden border border-gray-200 shadow-lg aspect-[4/3]">
@@ -77,7 +73,7 @@ const GreaseExtractionSection: React.FC = () => {
                 </div>
                 <div className="rounded-xl overflow-hidden border border-gray-200 shadow-lg aspect-[4/3]">
                   <img 
-                    src="https://i.imgur.com/bFpiLs6.jpeg" 
+                    src="https://i.imgur.com/tbNRXH8.jpeg" 
                     alt="Instalación profesional de extracción de grasa 2" 
                     className="w-full h-full object-cover"
                   />
