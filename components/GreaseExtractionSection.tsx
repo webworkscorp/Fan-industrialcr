@@ -1,16 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Reveal } from './Reveal';
+
+const LoadedImage = ({ src, alt, className = "" }: { src: string, alt: string, className?: string }) => {
+  const [isLoaded, setIsLoaded] = useState(false);
+  return (
+    <div className={`relative overflow-hidden bg-gray-100 ${className}`}>
+      {!isLoaded && <div className="absolute inset-0 bg-gray-200 animate-pulse" />}
+      <img 
+        src={src} 
+        alt={alt} 
+        onLoad={() => setIsLoaded(true)}
+        loading="lazy"
+        className={`w-full h-full object-cover transition-opacity duration-700 ${isLoaded ? 'opacity-100' : 'opacity-0'}`}
+      />
+    </div>
+  );
+};
 
 const GreaseExtractionSection: React.FC = () => {
   return (
     <section className="py-24 bg-[#f8fafc] relative overflow-hidden" id="grease-extraction">
-      {/* Elemento decorativo de fondo */}
       <div className="absolute top-0 right-0 w-1/2 h-full bg-gray-100 -skew-x-12 translate-x-32 z-0"></div>
       
       <div className="max-w-7xl mx-auto px-6 lg:px-8 relative z-10">
         <div className="grid lg:grid-cols-12 gap-12 items-center">
           
-          {/* Columna de Imagen (Chef) */}
           <div className="lg:col-span-5 relative mb-12 lg:mb-0 order-1 lg:order-1">
             <Reveal direction="right" width="100%">
               <div className="relative">
@@ -31,7 +45,6 @@ const GreaseExtractionSection: React.FC = () => {
             </Reveal>
           </div>
 
-          {/* Columna de Texto */}
           <div className="lg:col-span-7 order-2 lg:order-2">
             <Reveal width="100%" direction="left">
               <div className="flex items-center gap-3 mb-6">
@@ -52,7 +65,6 @@ const GreaseExtractionSection: React.FC = () => {
                 <p className="text-xl text-gray-700 font-medium leading-relaxed">
                   Proteja su cocina y espacios de trabajo de plagas, suciedad impregnada y malos olores, utilizando sistemas de extracción de grasa de alto rendimiento.
                 </p>
-                
                 <div className="bg-[#E62E2E]/5 border-l-4 border-[#E62E2E] p-5 rounded-r-lg">
                   <p className="text-[#051130] font-black uppercase text-sm tracking-widest leading-relaxed">
                     El sistema incluye Campana, ducto en acero inoxidable y extractor a la medida.
@@ -61,23 +73,18 @@ const GreaseExtractionSection: React.FC = () => {
               </div>
             </Reveal>
 
-            {/* Grid de Imágenes de Instalación */}
             <Reveal width="100%" delay={250} direction="left">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
-                <div className="rounded-xl overflow-hidden border border-gray-200 shadow-lg aspect-[4/3]">
-                  <img 
-                    src="https://i.imgur.com/PrTVdVi.jpeg" 
-                    alt="Instalación profesional de extracción de grasa 1" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="rounded-xl overflow-hidden border border-gray-200 shadow-lg aspect-[4/3]">
-                  <img 
-                    src="https://i.imgur.com/tbNRXH8.jpeg" 
-                    alt="Instalación profesional de extracción de grasa 2" 
-                    className="w-full h-full object-cover"
-                  />
-                </div>
+                <LoadedImage 
+                  src="https://i.imgur.com/PrTVdVi.jpeg" 
+                  alt="Instalación profesional de extracción de grasa 1" 
+                  className="rounded-xl border border-gray-200 shadow-lg aspect-[4/3]"
+                />
+                <LoadedImage 
+                  src="https://i.imgur.com/tbNRXH8.jpeg" 
+                  alt="Instalación profesional de extracción de grasa 2" 
+                  className="rounded-xl border border-gray-200 shadow-lg aspect-[4/3]"
+                />
               </div>
             </Reveal>
 
@@ -95,7 +102,6 @@ const GreaseExtractionSection: React.FC = () => {
               </div>
             </Reveal>
           </div>
-
         </div>
       </div>
     </section>
